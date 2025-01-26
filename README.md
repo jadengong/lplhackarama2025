@@ -13,3 +13,25 @@ SmartShopper is an innovative e-commerce platform that empowers shoppers with da
 1. Clone the repository:
    ```bash
    git clone https://github.com/your-username/smartshopper.git
+
+
+2. Navigate into the project directory:
+   ```bash
+   cd smartshopper
+
+
+3. Install the dependencies:
+   ```bash 
+   npm install
+
+4. Run the development server:
+   ```bash
+   npm start 
+
+### Technologies Used:
+- React.js
+- CSS3
+- JavaScript
+- HTML5
+- React Hooks
+
