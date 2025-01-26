@@ -34,3 +34,18 @@ SmartShopper is an innovative e-commerce platform that empowers shoppers with da
 - HTML5
 - React Hooks
 
+## Additional Information
+Links used for comparison in video:
+
+https://www.amazon.com/New-Balance-Mens-Sneaker-White/dp/B093QL1BYY?psc=1
+https://www.nike.com/t/lebron-witness-8-basketball-shoes-GEKpJ9OS/FB2239-104
+
+Try these links for yourself:
+https://www.amazon.com/Womens-Sneaker-White-Black-Orange/dp/B0B6FSZ3VL?th=1&psc=1
+https://www.nike.com/t/zoom-vomero-5-se-sp-mens-shoes-MgsTqZ/CI1694-001
+
+
+https://www.amazon.com/Crocs-Unisex-Classic-Lined-Black/dp/B01A6LTSA0?th=1&psc=1
+https://www.nike.com/t/sabrina-2-flowers-basketball-shoes-vvfGFS/FQ2174-100
+
+Essentially any shoe you view on Nike works. On Amazon, the web scraper only works when you select a size, as it extracts price information in a certain way.
