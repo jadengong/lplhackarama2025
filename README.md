@@ -19,7 +19,6 @@ SmartShopper is an innovative e-commerce platform that empowers shoppers with da
    ```bash
    cd smartshopper
 
-
 3. Install the dependencies:
    ```bash 
    npm install
