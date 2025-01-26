@@ -1,0 +1,292 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #6a11cb, #2575fc); 
+    height: 100vh; 
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.page-break {
+    height: 50px; 
+    background-color: #f0f0f0;  
+    margin: px 0;  
+}
+
+/* Other styles */
+button {
+    cursor: pointer;
+    background-color: #5A67D8; 
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 15px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #434190; /* Darker shade on hover */
+}
+
+input[type="text"] {
+    padding: 12px;
+    font-size: 16px;
+    width: 100%;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    margin-right: 10px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #5A67D8; 
+}
+
+/* Container Styling */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+/* Header Section */
+.landing-header {
+    margin-bottom: 50px;
+}
+
+.landing-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    font-weight: 1000;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.landing-header p {
+    font-size: 18px;
+    color: #ffffff;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Search Section */
+.search-section {
+    width: 100%;
+    align-items: center;
+    max-width: 750px;
+    margin-bottom: 60px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.search-input {
+    font-family: 'Poppins', sans-serif;
+    width: 80%;
+    padding: 15px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 2px solid #ddd;
+    margin-right: 10px;
+}
+
+.search-button {
+    padding: 16px 24px;
+    font-size: px;
+    background-color: #161b46;
+    color: white;
+    border-radius: 15px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #403f61;
+}
+
+/* Styling for the search suggestions dropdown */
+.suggestions-dropdown {
+    position: absolute;
+    top: 100%; /* Position right below the search input */
+    left: 0;
+    width: 85%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    max-height: 200px;
+    overflow-y: auto; /* Make the dropdown scrollable if there are too many suggestions */
+    z-index: 10; /* Ensure it appears above other content */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Styling the scrollbar */
+.suggestions-dropdown::-webkit-scrollbar {
+    width: 8px; 
+}
+
+.suggestions-dropdown::-webkit-scrollbar-thumb {
+    background-color: #5A67D8;
+    border-radius: 10px; 
+    border: 2px solid #f0f0f0; 
+}
+
+.suggestions-dropdown::-webkit-scrollbar-track {
+    background-color: #f0f0f0; 
+    border-radius: 10px; 
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0; 
+}
+
+/* Shadow for dropdown */
+.suggestions-dropdown {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Features Section */
+.features-section {
+    width: 100%;
+    max-width: 800px;
+    text-align: left;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.features-section h2 {
+    text-align:start;
+    font-size: 28px;
+    margin-bottom: 20px;
+    margin-top: auto;
+    color: #333;
+}
+
+.features-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.features-section ul li {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.features-section ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #5A67D8;
+    font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .landing-header h1 {
+        font-size: 30px;
+    }
+
+    .search-input, .search-button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .features-section {
+        padding: 15px;
+    }
+
+    .features-section h2 {
+        font-size: 24px;
+    }
+
+    .features-section ul li {
+        font-size: 16px;
+    }
+}
+
+/* New Section for Comparison */
+.comparison-section {
+    display: flex;
+    justify-content: space-around; 
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.comparison-box {
+    width: 45%;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+}
+
+.comparison-box:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.comparison-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.comparison-box h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.comparison-box p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.comparison-box .price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #5A67D8;
+}
