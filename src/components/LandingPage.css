@@ -1,0 +1,79 @@
+/* LandingPage.css */
+
+.landing-page {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 350px;
+    color: #333;
+  }
+
+  
+  
+  .hero {
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .hero h1 {
+    font-size: 50px;
+    color: #5a67d8;
+  }
+  
+  .description, .features, .contact {
+    padding: 10px 20px;
+    text-align: center;
+  }
+  
+  .description h2, .features h2, .contact h2 {
+    font-size: 30px;
+    padding: 5px;
+    color: #5a67d8;
+  }
+
+  
+  
+  .features ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .features li {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    background-color: #5a66d8;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  /* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background: #e4e4e7; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5a67d8; 
+  border-radius: 10px; 
+  border: 2px solid #f7f7f7; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #434190; 
+}
+  
+  button:hover {
+    background-color: #434190;
+  }
+  
