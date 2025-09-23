@@ -41,8 +41,8 @@ const SearchResultsPage = () => {
         <table className="price-comparison-table">
           <thead>
             <tr>
-              <th>Platform</th>
-              <th>Price</th>
+              <th scope="col">Platform</th>
+              <th scope="col">Price</th>
             </tr>
           </thead>
           <tbody>

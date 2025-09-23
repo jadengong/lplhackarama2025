@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Navbar.css'; 
 
 
@@ -8,12 +8,11 @@ const Navbar = () => {
     <nav className="navbar">
       <ul>
         <li>
-          <Link to="/landing">Home</Link> {/* Links to the landing page */}
+          <NavLink to="/landing" className={({ isActive }) => isActive ? 'active' : undefined}>Home</NavLink>
         </li>
         <li>
-          <Link to="/">Search</Link> {/* Link to the search page */}
+          <NavLink to="/" end className={({ isActive }) => isActive ? 'active' : undefined}>Search</NavLink>
         </li>
-        
       </ul>
     </nav>
   );

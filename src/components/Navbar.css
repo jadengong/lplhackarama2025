@@ -56,6 +56,11 @@
     text-decoration: underline;
     transform: none;
   }
+
+  .navbar a.active {
+    color: #ff5733;
+    text-decoration: underline;
+  }
   
   /* for smaller screens */
   @media screen and (max-width: 768px) {
