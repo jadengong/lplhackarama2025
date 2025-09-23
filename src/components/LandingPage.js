@@ -7,14 +7,14 @@ function LandingPage() {
       <div className="container">
         {/* Hero Section */}
         <section className="text-center py-10">
-          <h1 className="text-white text-4xl md:text-6xl font-extrabold tracking-tight drop-shadow-sm">
+          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight drop-shadow-sm bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent">
             Welcome to Smart Shopper!
           </h1>
           <p className="text-indigo-100 mt-3 max-w-2xl mx-auto">
             Your one-stop shop for smart shopping solutions.
           </p>
           <div className="mt-6">
-            <a href="/" className="inline-block rounded-lg bg-white/10 px-5 py-2 text-white backdrop-blur hover:bg-white/20 transition">
+            <a href="/" className="inline-block rounded-lg bg-gradient-to-r from-fuchsia-500 to-indigo-500 px-5 py-2 text-white hover:from-fuchsia-600 hover:to-indigo-600 transition">
               Start Searching
             </a>
           </div>
@@ -30,14 +30,25 @@ function LandingPage() {
           </p>
         </section>
 
+        
+
         {/* Features Section */}
         <section className="bg-white rounded-xl shadow-md p-6 md:p-8 mb-6">
-          <h2 className="text-2xl font-semibold text-gray-900">Features</h2>
-          <ul className="mt-4 grid gap-3 text-gray-700 list-disc list-inside">
-            <li>Product summaries with cost analysis</li>
-            <li>Purchase recommendations and resale strategies</li>
-            <li>Identification of optimal buying opportunities</li>
-          </ul>
+          <h2 className="text-2xl font-semibold text-gray-900 mb-4">Features</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="rounded-lg border border-gray-100 p-4">
+              <h3 className="font-semibold text-gray-900">Smart Summaries</h3>
+              <p className="text-gray-600 mt-2">Product summaries with clear cost analysis and value indicators.</p>
+            </div>
+            <div className="rounded-lg border border-gray-100 p-4">
+              <h3 className="font-semibold text-gray-900">Price Tracking</h3>
+              <p className="text-gray-600 mt-2">Track historical prices and get notified on favorable dips.</p>
+            </div>
+            <div className="rounded-lg border border-gray-100 p-4">
+              <h3 className="font-semibold text-gray-900">Buy Signals</h3>
+              <p className="text-gray-600 mt-2">Identify optimal buying opportunities across vendors.</p>
+            </div>
+          </div>
         </section>
 
         {/* Contact Section */}
@@ -48,6 +59,20 @@ function LandingPage() {
             Contact
           </button>
         </section>
+
+        {/* CTA Banner */}
+        <section className="rounded-xl bg-white/10 border border-white/20 text-white p-6 md:p-8 mb-12 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div>
+            <h3 className="text-2xl font-semibold">Ready to find your next best deal?</h3>
+            <p className="text-indigo-100">Search products and compare prices instantly.</p>
+          </div>
+          <a href="/" className="inline-block rounded-lg bg-white text-indigo-700 px-5 py-2 font-medium hover:bg-indigo-50 transition">Search Now</a>
+        </section>
+
+        {/* Footer */}
+        <footer className="text-center text-indigo-100 pb-10">
+          © {new Date().getFullYear()} Smart Shopper. All rights reserved.
+        </footer>
       </div>
     </div>
   );
