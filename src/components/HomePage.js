@@ -74,14 +74,14 @@ const HomePage = () => {
   };
 
   return (
-    <div className="home-container">
+    <div className="home-container bg-gradient-to-r from-indigo-600 to-blue-500 min-h-screen pt-20">
       <header className="landing-header container">
         <h1>SmartShopper</h1>
         <p className="text-gray-200 max-w-xl mx-auto">Empowering your shopping with data-driven insights.</p>
       </header>
 
       <section className="search-section container">
-        <div className="search-box w-full">
+        <div className="search-box w-full flex items-start">
           <input 
             type="text" 
             placeholder="Search for a product..." 

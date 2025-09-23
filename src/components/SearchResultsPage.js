@@ -8,7 +8,7 @@ const SearchResultsPage = () => {
   const params = new URLSearchParams(location.search);
   const q = params.get('q');
   return (
-    <div className="search-results-page bg-gradient-to-r from-indigo-600 to-blue-500 min-h-screen"> 
+    <div className="search-results-page bg-gradient-to-r from-indigo-600 to-blue-500 min-h-screen pt-20"> 
       <header className="search-results-header container py-8"> 
         <h1 className="text-3xl md:text-4xl font-semibold">{q ? `Results for "${q}"` : 'Tatum 3 Basketball Shoes (FZ6598-103, White/Kinetic Green/Black)'}</h1>
       </header>

@@ -3,7 +3,7 @@ import "./LandingPage.css";
 
 function LandingPage() {
   return (
-    <div className="landing-page container">
+    <div className="landing-page container pt-24">
       {/* Hero Section */}
       <section className="hero">
         <h1 className="text-3xl md:text-5xl font-bold text-indigo-600">Welcome to Smart Shopper!</h1>
