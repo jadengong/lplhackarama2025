@@ -74,8 +74,8 @@ const HomePage = () => {
   };
 
   return (
-    <div className="home-container bg-gradient-to-br from-sky-500 via-indigo-600 to-fuchsia-600 min-h-screen pt-28">
-      <header className="landing-header container">
+    <div className="home-container bg-gradient-to-br from-sky-500 via-indigo-600 to-fuchsia-600 min-h-screen pt-40">
+      <header className="landing-header container mt-32 md:mt-36">
         <h1>SmartShopper</h1>
         <p className="text-gray-200 max-w-xl mx-auto">Empowering your shopping with data-driven insights.</p>
       </header>
@@ -156,14 +156,35 @@ const HomePage = () => {
         </div>
       </section>
 
+      {/* Benefits grid */}
       <section className="container mt-8">
-        <h2 className="text-white text-2xl font-semibold text-left">Popular searches</h2>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {['Nike shoes','Adidas shoes','Puma shoes','Lebron 20','Tatum 3','Under Armour'].map((t) => (
-            <button key={t} onClick={() => setQuery(t)} className="px-3 py-1 rounded-full bg-white/20 text-white hover:bg-white/30 transition">
-              {t}
-            </button>
+        <h2 className="text-white text-2xl font-semibold text-left">Why use SmartShopper?</h2>
+        <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+          {[
+            {title: 'Real-time insights', desc: 'Stay up to date with dynamic pricing and demand signals.'},
+            {title: 'Transparent comparisons', desc: 'See clear price breakdowns and vendor differences.'},
+            {title: 'Decision confidence', desc: 'Use historical trends to avoid overpaying.'}
+          ].map((item, idx) => (
+            <div key={idx} className="bg-white/90 rounded-2xl shadow-xl ring-1 ring-black/5 p-5 text-left">
+              <h3 className="font-semibold text-gray-900">{item.title}</h3>
+              <p className="text-gray-600 mt-2">{item.desc}</p>
+            </div>
           ))}
+        </div>
+      </section>
+
+      {/* FAQ / info section */}
+      <section className="container mt-8 mb-12">
+        <h2 className="text-white text-2xl font-semibold text-left">Frequently asked</h2>
+        <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+          <div className="bg-white/90 rounded-2xl shadow-xl ring-1 ring-black/5 p-5">
+            <h3 className="font-semibold text-gray-900">Where does data come from?</h3>
+            <p className="text-gray-600 mt-2">We aggregate multiple public sources and simulate data while in demo mode.</p>
+          </div>
+          <div className="bg-white/90 rounded-2xl shadow-xl ring-1 ring-black/5 p-5">
+            <h3 className="font-semibold text-gray-900">Can I track price drops?</h3>
+            <p className="text-gray-600 mt-2">Yes—use the results page chart to monitor trends and identify dips.</p>
+          </div>
         </div>
       </section>
     </div>
