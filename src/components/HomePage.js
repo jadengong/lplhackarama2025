@@ -75,20 +75,20 @@ const HomePage = () => {
 
   return (
     <div className="home-container">
-      <header className="landing-header">
+      <header className="landing-header container">
         <h1>SmartShopper</h1>
-        <p className="text-gray-200">Empowering your shopping with data-driven insights.</p>
+        <p className="text-gray-200 max-w-xl mx-auto">Empowering your shopping with data-driven insights.</p>
       </header>
 
-      <section className="search-section">
-        <div className="search-box">
+      <section className="search-section container">
+        <div className="search-box w-full">
           <input 
             type="text" 
             placeholder="Search for a product..." 
             value={query}
             onChange={handleSearchChange}
             onKeyDown={handleKeyDown}
-            className="search-input"
+            className="search-input w-full"
             role="combobox"
             aria-autocomplete="list"
             aria-expanded={query && suggestions.length > 0 ? true : false}
@@ -98,7 +98,7 @@ const HomePage = () => {
           />
           <button 
             onClick={handleSearchSubmit} 
-            className="search-button"
+            className="search-button ml-2"
           >
             Search
           </button>
