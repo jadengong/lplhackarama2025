@@ -10,13 +10,20 @@ ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, T
 const HistoricalMarketDataChart = () => {
   const [labels, setLabels] = useState([]);
   const [series, setSeries] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
   useEffect(() => {
+    setIsLoading(true);
+    setError('');
     // mock productId for now
-    fetchPriceHistory('tatum-3').then((res) => {
-      setLabels(res.labels);
-      setSeries(res.data);
-    });
+    fetchPriceHistory('tatum-3')
+      .then((res) => {
+        setLabels(res.labels);
+        setSeries(res.data);
+      })
+      .catch(() => setError('Failed to load price history'))
+      .finally(() => setIsLoading(false));
   }, []);
 
   const data = {
@@ -62,6 +69,15 @@ const HistoricalMarketDataChart = () => {
     },
   };
 
+  if (isLoading) {
+    return <div className="chart-container">Loading chart...</div>;
+  }
+  if (error) {
+    return <div className="chart-container">{error}</div>;
+  }
+  if (!labels.length || !series.length) {
+    return <div className="chart-container">No data</div>;
+  }
   return (
     <div className="chart-container">
       <Line data={data} options={options} />

@@ -1,12 +1,16 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import './SearchResultsPage.css';
 import HistoricalMarketDataChart from './Chart.js'; 
 
 const SearchResultsPage = () => {
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const q = params.get('q');
   return (
     <div className="search-results-page"> 
       <header className="search-results-header"> 
-        <h1>Tatum 3 Basketball Shoes (FZ6598-103, White/Kinetic Green/Black)</h1>
+        <h1>{q ? `Results for "${q}"` : 'Tatum 3 Basketball Shoes (FZ6598-103, White/Kinetic Green/Black)'}</h1>
       </header>
 
       {/* Product Description */}

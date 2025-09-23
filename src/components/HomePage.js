@@ -8,6 +8,8 @@ const HomePage = () => {
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]); // To store the suggestions
   const [activeIndex, setActiveIndex] = useState(-1); // Keyboard-focused suggestion
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
 
   // Handle the search input change
   const handleSearchChange = (e) => {
@@ -15,12 +17,22 @@ const HomePage = () => {
     setQuery(userInput);
     if (!userInput.trim()) {
       setSuggestions([]);
+      setIsLoading(false);
+      setError('');
       return;
     }
     // Fetch suggestions asynchronously
-    fetchSuggestions(userInput).then((results) => {
-      setSuggestions(results);
-    });
+    setIsLoading(true);
+    setError('');
+    fetchSuggestions(userInput)
+      .then((results) => {
+        setSuggestions(results);
+      })
+      .catch(() => {
+        setError('Failed to load suggestions');
+        setSuggestions([]);
+      })
+      .finally(() => setIsLoading(false));
   };
 
 	// Handle the search submit (navigate to search results or perform a search)
@@ -32,7 +44,7 @@ const HomePage = () => {
     }
 
 		// Perform search logic (you can navigate to the search results page or filter data)
-		navigate('/search-results');
+		navigate(`/search-results?q=${encodeURIComponent(query.trim())}`);
   };
 
   // Handle suggestion click (autofill the search input)
@@ -92,13 +104,22 @@ const HomePage = () => {
           </button>
           
           {/* Dropdown for suggestions */}
-          {query && suggestions.length > 0 && (
+          {query && (
             <ul 
               className="suggestions-dropdown"
               id="suggestions-listbox"
               role="listbox"
             >
-              {suggestions.map((suggestion, index) => (
+              {isLoading && (
+                <li className="suggestion-item" role="status">Loading...</li>
+              )}
+              {!isLoading && error && (
+                <li className="suggestion-item" role="status">{error}</li>
+              )}
+              {!isLoading && !error && suggestions.length === 0 && (
+                <li className="suggestion-item" role="status">No suggestions</li>
+              )}
+              {!isLoading && !error && suggestions.map((suggestion, index) => (
                 <li 
                   key={index} 
                   className="suggestion-item"
