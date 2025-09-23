@@ -77,7 +77,7 @@ const HomePage = () => {
     <div className="home-container">
       <header className="landing-header">
         <h1>SmartShopper</h1>
-        <p>Empowering your shopping with data-driven insights.</p>
+        <p className="text-gray-200">Empowering your shopping with data-driven insights.</p>
       </header>
 
       <section className="search-section">
