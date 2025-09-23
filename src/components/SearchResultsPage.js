@@ -1,6 +1,5 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import './SearchResultsPage.css';
 import HistoricalMarketDataChart from './Chart.js'; 
 
 const SearchResultsPage = () => {
