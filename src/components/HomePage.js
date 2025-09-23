@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HomePage.css';  
+import { fetchSuggestions } from '../services/api';
 
 const HomePage = () => {
 	const navigate = useNavigate();
@@ -8,28 +9,18 @@ const HomePage = () => {
   const [suggestions, setSuggestions] = useState([]); // To store the suggestions
   const [activeIndex, setActiveIndex] = useState(-1); // Keyboard-focused suggestion
 
-  // Sample suggestion list (in real-world, this could come from an API)
-  const allSuggestions = [
-    'Nike Basketball Shoes',
-    'Adidas Basketball Shoes',
-    'Puma Basketball Shoes',
-    'Under Armour Basketball Shoes',
-    'Reebok Basketball Shoes',
-    'Tatum 3 Basketball Shoes',
-    'Lebron 20 Basketball Shoes'
-  ];
-
   // Handle the search input change
   const handleSearchChange = (e) => {
     const userInput = e.target.value;
     setQuery(userInput);
-
-    // Filter suggestions based on user input
-    const filteredSuggestions = allSuggestions.filter((item) =>
-      item.toLowerCase().includes(userInput.toLowerCase())
-    );
-    
-    setSuggestions(filteredSuggestions);
+    if (!userInput.trim()) {
+      setSuggestions([]);
+      return;
+    }
+    // Fetch suggestions asynchronously
+    fetchSuggestions(userInput).then((results) => {
+      setSuggestions(results);
+    });
   };
 
 	// Handle the search submit (navigate to search results or perform a search)

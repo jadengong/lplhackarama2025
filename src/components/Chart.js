@@ -1,18 +1,30 @@
 // HistoricalMarketDataChart.jsx
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend } from 'chart.js';
+import { fetchPriceHistory } from '../services/api';
 
 // Registering chart components
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 const HistoricalMarketDataChart = () => {
+  const [labels, setLabels] = useState([]);
+  const [series, setSeries] = useState([]);
+
+  useEffect(() => {
+    // mock productId for now
+    fetchPriceHistory('tatum-3').then((res) => {
+      setLabels(res.labels);
+      setSeries(res.data);
+    });
+  }, []);
+
   const data = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'], 
+    labels,
     datasets: [
       {
         label: 'Price ($)',
-        data: [100, 110, 115, 105, 120, 125, 130], // Historical price data
+        data: series,
         borderColor: 'rgba(75, 192, 192, 1)',
         backgroundColor: 'rgba(75, 192, 192, 0.2)',
         fill: true, // Make the area under the line shaded
