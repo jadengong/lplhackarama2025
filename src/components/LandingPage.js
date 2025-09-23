@@ -7,8 +7,8 @@ function LandingPage() {
       <div className="container">
         {/* Hero Section */}
         <section className="text-center py-10">
-          <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight drop-shadow-sm bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 bg-clip-text text-transparent">
-            Welcome to Smart Shopper!
+          <h1 className="text-white text-5xl md:text-6xl font-extrabold tracking-tight drop-shadow-sm">
+            Welcome to Smart Shopper
           </h1>
           <p className="text-indigo-100 mt-3 max-w-2xl mx-auto">
             Your one-stop shop for smart shopping solutions.

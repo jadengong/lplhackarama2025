@@ -76,7 +76,7 @@ const HomePage = () => {
   return (
     <div className="home-container bg-gradient-to-br from-sky-500 via-indigo-600 to-fuchsia-600 min-h-screen pt-40">
       <header className="landing-header container mt-32 md:mt-36">
-        <h1>SmartShopper</h1>
+        <h1 className="text-white text-5xl md:text-6xl font-extrabold tracking-tight drop-shadow-sm">Smart Shopper</h1>
         <p className="text-gray-200 max-w-xl mx-auto">Empowering your shopping with data-driven insights.</p>
       </header>
 
