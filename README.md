@@ -1,36 +1,48 @@
-# SmartShopper
+# SmartShopper (Finance Dashboard)
 
-SmartShopper is an innovative e-commerce platform that empowers shoppers with data-driven insights to make informed purchasing decisions. It provides comprehensive product analysis, price comparisons across multiple platforms, and market trends, all at your fingertips.
+SmartShopper is a simple React app that demonstrates a shopping insights dashboard with search, a landing page, and a static search results page including a historical price chart.
 
 ## Features
-- **Search Functionality:** Search for products with real-time suggestions.
-- **Product Insights:** View detailed analysis of products with buying opportunities.
-- **Price Comparisons:** Compare prices across different platforms.
-- **Market Trends:** Access predictive analysis from various sources.
+- **Search**: Client-side suggestions with keyboard navigation and ARIA support.
+- **Landing**: Basic marketing/intro page.
+- **Results**: Static product details, price comparison table, and a Chart.js line chart.
 
-## Installation
+## Getting Started
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/smartshopper.git
+From the monorepo root (`lplhackarama2025`), the app lives in `finance-dashboard/`.
 
+### Install
+```bash
+# From repo root
+cd finance-dashboard
+npm install
+```
 
-2. Navigate into the project directory:
-   ```bash
-   cd smartshopper
+### Run (development)
+```bash
+npm start
+```
 
-3. Install the dependencies:
-   ```bash 
-   npm install
+### Windows PowerShell notes
+PowerShell does not support `&&` like some shells. Use one of the following instead:
+```powershell
+Set-Location finance-dashboard; npm start
+# or from repo root without cd
+npm --prefix finance-dashboard start
+```
 
-4. Run the development server:
-   ```bash
-   npm start 
+## Scripts
+- **start**: Start CRA dev server
+- **build**: Production build
+- **test**: Run tests
 
-### Technologies Used:
-- React.js
-- CSS3
-- JavaScript
-- HTML5
-- React Hooks
+## Tech
+- React 19
+- React Router DOM 7
+- Create React App (react-scripts 5)
+- Chart.js 4 + react-chartjs-2
+- CSS modules (plain CSS files)
 
+## Notes
+- Data is currently mocked/stubbed in components. Replace with real APIs as needed.
+- If you plan to adopt a design system, either remove unused MUI/font deps or begin using them consistently.
