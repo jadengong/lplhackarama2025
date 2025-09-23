@@ -6,6 +6,7 @@ const HomePage = () => {
 	const navigate = useNavigate();
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]); // To store the suggestions
+  const [activeIndex, setActiveIndex] = useState(-1); // Keyboard-focused suggestion
 
   // Sample suggestion list (in real-world, this could come from an API)
   const allSuggestions = [
@@ -47,6 +48,26 @@ const HomePage = () => {
   const handleSuggestionClick = (suggestion) => {
     setQuery(suggestion); // Autofill the input with the clicked suggestion
     setSuggestions([]); // Clear the suggestions list
+    setActiveIndex(-1);
+  };
+
+  const handleKeyDown = (e) => {
+    if (!suggestions.length) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setActiveIndex((prev) => (prev + 1) % suggestions.length);
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setActiveIndex((prev) => (prev - 1 + suggestions.length) % suggestions.length);
+    } else if (e.key === 'Enter') {
+      if (activeIndex >= 0 && activeIndex < suggestions.length) {
+        e.preventDefault();
+        handleSuggestionClick(suggestions[activeIndex]);
+      }
+    } else if (e.key === 'Escape') {
+      setSuggestions([]);
+      setActiveIndex(-1);
+    }
   };
 
   return (
@@ -63,7 +84,14 @@ const HomePage = () => {
             placeholder="Search for a product..." 
             value={query}
             onChange={handleSearchChange}
+            onKeyDown={handleKeyDown}
             className="search-input"
+            role="combobox"
+            aria-autocomplete="list"
+            aria-expanded={query && suggestions.length > 0 ? true : false}
+            aria-controls="suggestions-listbox"
+            aria-activedescendant={activeIndex >= 0 ? `suggestion-option-${activeIndex}` : undefined}
+            aria-label="Search for a product"
           />
           <button 
             onClick={handleSearchSubmit} 
@@ -74,11 +102,20 @@ const HomePage = () => {
           
           {/* Dropdown for suggestions */}
           {query && suggestions.length > 0 && (
-            <ul className="suggestions-dropdown">
+            <ul 
+              className="suggestions-dropdown"
+              id="suggestions-listbox"
+              role="listbox"
+            >
               {suggestions.map((suggestion, index) => (
                 <li 
                   key={index} 
                   className="suggestion-item"
+                  id={`suggestion-option-${index}`}
+                  role="option"
+                  aria-selected={index === activeIndex}
+                  onMouseEnter={() => setActiveIndex(index)}
+                  onMouseDown={(e) => e.preventDefault()}
                   onClick={() => handleSuggestionClick(suggestion)} // click handler
                 >
                   {suggestion}
