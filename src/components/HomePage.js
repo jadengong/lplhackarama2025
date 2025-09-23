@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './HomePage.css';  
 
 const HomePage = () => {
+	const navigate = useNavigate();
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState([]); // To store the suggestions
 
@@ -29,16 +31,16 @@ const HomePage = () => {
     setSuggestions(filteredSuggestions);
   };
 
-  // Handle the search submit (navigate to search results or perform a search)
+	// Handle the search submit (navigate to search results or perform a search)
   const handleSearchSubmit = (e) => {
     e.preventDefault(); // Prevent default form submission
     if (query.trim() === '') {
       alert('Please enter a search term!');
       return;
     }
-    
-    // Perform search logic (you can navigate to the search results page or filter data)
-    window.location.href = "/search-results";
+
+		// Perform search logic (you can navigate to the search results page or filter data)
+		navigate('/search-results');
   };
 
   // Handle suggestion click (autofill the search input)
