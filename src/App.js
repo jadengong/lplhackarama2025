@@ -10,14 +10,16 @@ const App = () => {
   return (
     <Router>
       <Navbar /> 
-      <Suspense fallback={<div style={{ padding: 16 }}>Loading...</div>}>
-        <Routes>
-          <Route path="/landing" element={<LandingPage />} />
-          <Route path="/" element={<HomePage />} />
-          <Route path="/search-results" element={<SearchResultsPage />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </Suspense>
+      <div className="pt-24">
+        <Suspense fallback={<div style={{ padding: 16 }}>Loading...</div>}>
+          <Routes>
+            <Route path="/landing" element={<LandingPage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/search-results" element={<SearchResultsPage />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Suspense>
+      </div>
     </Router>
   );
 };

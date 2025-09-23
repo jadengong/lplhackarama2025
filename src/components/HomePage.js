@@ -138,14 +138,33 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="features-section">
-        <h2>What We Offer</h2>
-        <ul>
-          <li>Comprehensive product analysis and buying opportunities</li>
-          <li>Price comparisons across multiple platforms</li>
-          <li>Market trends and predictive analysis among different sources</li>
-          <li>Financial attributes like condition, rarity, and reputation</li>
-        </ul>
+      <section className="features-section container">
+        <h2 className="text-white text-2xl font-semibold text-left">How it works</h2>
+        <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="bg-white/90 rounded-2xl shadow-xl ring-1 ring-black/5 p-4 text-left">
+            <h3 className="font-semibold text-gray-900">Search</h3>
+            <p className="text-gray-600 mt-1">Find products with smart suggestions as you type.</p>
+          </div>
+          <div className="bg-white/90 rounded-2xl shadow-xl ring-1 ring-black/5 p-4 text-left">
+            <h3 className="font-semibold text-gray-900">Compare</h3>
+            <p className="text-gray-600 mt-1">See prices and trends to judge the value over time.</p>
+          </div>
+          <div className="bg-white/90 rounded-2xl shadow-xl ring-1 ring-black/5 p-4 text-left">
+            <h3 className="font-semibold text-gray-900">Decide</h3>
+            <p className="text-gray-600 mt-1">Use insights to choose the right time and place to buy.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="container mt-8">
+        <h2 className="text-white text-2xl font-semibold text-left">Popular searches</h2>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {['Nike shoes','Adidas shoes','Puma shoes','Lebron 20','Tatum 3','Under Armour'].map((t) => (
+            <button key={t} onClick={() => setQuery(t)} className="px-3 py-1 rounded-full bg-white/20 text-white hover:bg-white/30 transition">
+              {t}
+            </button>
+          ))}
+        </div>
       </section>
     </div>
   );
