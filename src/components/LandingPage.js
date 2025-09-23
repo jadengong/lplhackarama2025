@@ -21,7 +21,7 @@ function LandingPage() {
         </section>
 
         {/* Description Section */}
-        <section className="bg-white rounded-xl shadow-md p-6 md:p-8 mb-6">
+        <section className="bg-white/90 rounded-2xl shadow-xl p-6 md:p-8 mb-6 backdrop-blur-sm ring-1 ring-black/5">
           <h2 className="text-2xl font-semibold text-gray-900">What Do We Do?</h2>
           <p className="text-gray-600 mt-3">
             Smart Shopper helps you make more informed and budget-conscious shopping decisions.
@@ -33,7 +33,7 @@ function LandingPage() {
         
 
         {/* Features Section */}
-        <section className="bg-white rounded-xl shadow-md p-6 md:p-8 mb-6">
+        <section className="bg-white/90 rounded-2xl shadow-xl p-6 md:p-8 mb-6 backdrop-blur-sm ring-1 ring-black/5">
           <h2 className="text-2xl font-semibold text-gray-900 mb-4">Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="rounded-lg border border-gray-100 p-4">
@@ -52,7 +52,7 @@ function LandingPage() {
         </section>
 
         {/* Contact Section */}
-        <section className="bg-white rounded-xl shadow-md p-6 md:p-8 mb-10">
+        <section className="bg-white/90 rounded-2xl shadow-xl p-6 md:p-8 mb-10 backdrop-blur-sm ring-1 ring-black/5">
           <h2 className="text-2xl font-semibold text-gray-900">Contact Us</h2>
           <p className="text-gray-600 mt-3">If you have any questions, feel free to reach out!</p>
           <button className="mt-4 px-5 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 transition">
@@ -61,7 +61,7 @@ function LandingPage() {
         </section>
 
         {/* CTA Banner */}
-        <section className="rounded-xl bg-white/10 border border-white/20 text-white p-6 md:p-8 mb-12 flex flex-col md:flex-row items-center justify-between gap-4">
+        <section className="rounded-xl bg-gradient-to-r from-rose-400/30 via-fuchsia-400/30 to-indigo-400/30 border border-white/20 text-white p-6 md:p-8 mb-12 flex flex-col md:flex-row items-center justify-between gap-4 backdrop-blur">
           <div>
             <h3 className="text-2xl font-semibold">Ready to find your next best deal?</h3>
             <p className="text-indigo-100">Search products and compare prices instantly.</p>

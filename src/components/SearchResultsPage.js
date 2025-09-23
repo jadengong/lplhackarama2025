@@ -13,7 +13,7 @@ const SearchResultsPage = () => {
       </header>
 
       {/* Product Description */}
-      <section className="section container"> 
+      <section className="section container bg-white/90 rounded-2xl shadow-xl ring-1 ring-black/5"> 
         <h2>Product Description</h2>
         <p><strong>Color:</strong> White/Black</p>
         <p><strong>Size:</strong> Available in multiple sizes (Men's 6-15)</p>
@@ -23,7 +23,7 @@ const SearchResultsPage = () => {
       </section>
 
       {/* Financial Attributes */}
-      <section className="section container"> 
+      <section className="section container bg-white/90 rounded-2xl shadow-xl ring-1 ring-black/5"> 
         <h2>Financial Attributes</h2>
         <ul>
           <li><strong>Brand Reputation:</strong> Excellent (Nike)</li>
@@ -35,7 +35,7 @@ const SearchResultsPage = () => {
       </section>
 
       {/* Price Comparison */}
-      <section className="section container"> 
+      <section className="section container bg-white/90 rounded-2xl shadow-xl ring-1 ring-black/5"> 
         <h2>Price Comparison</h2>
         <table className="price-comparison-table w-full border-collapse mt-4">
           <thead>
@@ -66,7 +66,7 @@ const SearchResultsPage = () => {
       </section>
 
       {/* Historical Market Data */}
-      <section className="section container">
+      <section className="section container bg-white/90 rounded-2xl shadow-xl ring-1 ring-black/5">
         <h2>Historical Market Data</h2>
         <p><strong>Price History:</strong> Showing a chart of price changes over the last 12 months.</p>
 
