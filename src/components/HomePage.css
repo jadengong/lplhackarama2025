@@ -27,7 +27,7 @@ a {
 .page-break {
     height: 50px; 
     background-color: #f0f0f0;  
-    margin: px 0;  
+    margin: 16px 0;  
 }
 
 /* Other styles */
@@ -118,7 +118,7 @@ input[type="text"]:focus {
 
 .search-button {
     padding: 16px 24px;
-    font-size: px;
+    font-size: 16px;
     background-color: #161b46;
     color: white;
     border-radius: 15px;
@@ -135,7 +135,7 @@ input[type="text"]:focus {
     position: absolute;
     top: 100%; /* Position right below the search input */
     left: 0;
-    width: 85%;
+    width: 100%;
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 10px;

@@ -1,8 +1,8 @@
 /* Navbar Container */
 .navbar {
     background-color: #333;
-    padding: 1rem 2rem;
-    height: 20px;
+    padding: 0.75rem 1rem;
+    min-height: 56px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -54,7 +54,7 @@
   .navbar a:hover {
     color: #ff5733; /* hover color */
     text-decoration: underline;
-    transform: scale(1.05); /* slight zoom */
+    transform: none;
   }
   
   /* for smaller screens */
