@@ -9,12 +9,12 @@ const SearchResultsPage = () => {
   const q = params.get('q');
   return (
     <div className="search-results-page"> 
-      <header className="search-results-header"> 
-        <h1>{q ? `Results for "${q}"` : 'Tatum 3 Basketball Shoes (FZ6598-103, White/Kinetic Green/Black)'}</h1>
+      <header className="search-results-header container py-8"> 
+        <h1 className="text-3xl md:text-4xl font-semibold">{q ? `Results for "${q}"` : 'Tatum 3 Basketball Shoes (FZ6598-103, White/Kinetic Green/Black)'}</h1>
       </header>
 
       {/* Product Description */}
-      <section className="section"> 
+      <section className="section container"> 
         <h2>Product Description</h2>
         <p><strong>Color:</strong> White/Black</p>
         <p><strong>Size:</strong> Available in multiple sizes (Men's 6-15)</p>
@@ -24,7 +24,7 @@ const SearchResultsPage = () => {
       </section>
 
       {/* Financial Attributes */}
-      <section className="section"> 
+      <section className="section container"> 
         <h2>Financial Attributes</h2>
         <ul>
           <li><strong>Brand Reputation:</strong> Excellent (Nike)</li>
@@ -36,7 +36,7 @@ const SearchResultsPage = () => {
       </section>
 
       {/* Price Comparison */}
-      <section className="section"> 
+      <section className="section container"> 
         <h2>Price Comparison</h2>
         <table className="price-comparison-table">
           <thead>
@@ -67,7 +67,7 @@ const SearchResultsPage = () => {
       </section>
 
       {/* Historical Market Data */}
-      <section className="section">
+      <section className="section container">
         <h2>Historical Market Data</h2>
         <p><strong>Price History:</strong> Showing a chart of price changes over the last 12 months.</p>
 
