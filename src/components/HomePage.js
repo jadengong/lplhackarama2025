@@ -74,10 +74,10 @@ const HomePage = () => {
   };
 
   return (
-    <div className="home-container bg-gradient-to-br from-sky-500 via-indigo-600 to-fuchsia-600 min-h-screen pt-40">
+    <div className="home-container bg-gradient-to-br from-gray-800 via-gray-700 to-gray-900 min-h-screen pt-40">
       <header className="landing-header container mt-32 md:mt-36">
         <h1 className="text-white text-5xl md:text-6xl font-extrabold tracking-tight drop-shadow-sm">Smart Shopper</h1>
-        <p className="text-gray-200 max-w-xl mx-auto">Empowering your shopping with data-driven insights.</p>
+        <p className="text-gray-300 max-w-xl mx-auto">Empowering your shopping with data-driven insights.</p>
       </header>
 
       <section className="search-section container">
@@ -141,17 +141,17 @@ const HomePage = () => {
       <section className="features-section container">
         <h2 className="text-white text-2xl font-semibold text-left">How it works</h2>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div className="bg-white/90 rounded-2xl shadow-xl ring-1 ring-black/5 p-4 text-left">
-            <h3 className="font-semibold text-gray-900">Search</h3>
-            <p className="text-gray-600 mt-1">Find products with smart suggestions as you type.</p>
+          <div className="bg-gray-800/90 rounded-2xl shadow-xl ring-1 ring-gray-600/20 p-4 text-left">
+            <h3 className="font-semibold text-white">Search</h3>
+            <p className="text-gray-300 mt-1">Find products with smart suggestions as you type.</p>
           </div>
-          <div className="bg-white/90 rounded-2xl shadow-xl ring-1 ring-black/5 p-4 text-left">
-            <h3 className="font-semibold text-gray-900">Compare</h3>
-            <p className="text-gray-600 mt-1">See prices and trends to judge the value over time.</p>
+          <div className="bg-gray-800/90 rounded-2xl shadow-xl ring-1 ring-gray-600/20 p-4 text-left">
+            <h3 className="font-semibold text-white">Compare</h3>
+            <p className="text-gray-300 mt-1">See prices and trends to judge the value over time.</p>
           </div>
-          <div className="bg-white/90 rounded-2xl shadow-xl ring-1 ring-black/5 p-4 text-left">
-            <h3 className="font-semibold text-gray-900">Decide</h3>
-            <p className="text-gray-600 mt-1">Use insights to choose the right time and place to buy.</p>
+          <div className="bg-gray-800/90 rounded-2xl shadow-xl ring-1 ring-gray-600/20 p-4 text-left">
+            <h3 className="font-semibold text-white">Decide</h3>
+            <p className="text-gray-300 mt-1">Use insights to choose the right time and place to buy.</p>
           </div>
         </div>
       </section>
@@ -165,9 +165,9 @@ const HomePage = () => {
             {title: 'Transparent comparisons', desc: 'See clear price breakdowns and vendor differences.'},
             {title: 'Decision confidence', desc: 'Use historical trends to avoid overpaying.'}
           ].map((item, idx) => (
-            <div key={idx} className="bg-white/90 rounded-2xl shadow-xl ring-1 ring-black/5 p-5 text-left">
-              <h3 className="font-semibold text-gray-900">{item.title}</h3>
-              <p className="text-gray-600 mt-2">{item.desc}</p>
+            <div key={idx} className="bg-gray-800/90 rounded-2xl shadow-xl ring-1 ring-gray-600/20 p-5 text-left">
+              <h3 className="font-semibold text-white">{item.title}</h3>
+              <p className="text-gray-300 mt-2">{item.desc}</p>
             </div>
           ))}
         </div>
@@ -177,13 +177,13 @@ const HomePage = () => {
       <section className="container mt-8 mb-12">
         <h2 className="text-white text-2xl font-semibold text-left">Frequently asked</h2>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
-          <div className="bg-white/90 rounded-2xl shadow-xl ring-1 ring-black/5 p-5">
-            <h3 className="font-semibold text-gray-900">Where does data come from?</h3>
-            <p className="text-gray-600 mt-2">We aggregate multiple public sources and simulate data while in demo mode.</p>
+          <div className="bg-gray-800/90 rounded-2xl shadow-xl ring-1 ring-gray-600/20 p-5">
+            <h3 className="font-semibold text-white">Where does data come from?</h3>
+            <p className="text-gray-300 mt-2">We aggregate multiple public sources and simulate data while in demo mode.</p>
           </div>
-          <div className="bg-white/90 rounded-2xl shadow-xl ring-1 ring-black/5 p-5">
-            <h3 className="font-semibold text-gray-900">Can I track price drops?</h3>
-            <p className="text-gray-600 mt-2">Yes—use the results page chart to monitor trends and identify dips.</p>
+          <div className="bg-gray-800/90 rounded-2xl shadow-xl ring-1 ring-gray-600/20 p-5">
+            <h3 className="font-semibold text-white">Can I track price drops?</h3>
+            <p className="text-gray-300 mt-2">Yes—use the results page chart to monitor trends and identify dips.</p>
           </div>
         </div>
       </section>
